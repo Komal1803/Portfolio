@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komal Gandhi – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #0077b6;
+      --secondary-color: #023e8a;
+      --bg-color: #caf0f8;
+      --text-color: #03045e;
+      --section-bg: #ffffff;
+      --button-bg: #0077b6;
+      --button-hover-bg: #0096c7;
+      --shadow-color: rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme='mint'] {
+      --bg-color: #e0f7f1;
+      --text-color: #083d3b;
+      --section-bg: #ffffff;
+      --primary-color: #4cae9b;
+      --secondary-color: #2d756f;
+      --button-bg: #4cae9b;
+      --button-hover-bg: #62c6ae;
+      --shadow-color: rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme='peach'] {
+      --bg-color: #fff3e6;
+      --text-color: #5e4033;
+      --section-bg: #fffaf5;
+      --primary-color: #ff8c42;
+      --secondary-color: #d76d35;
+      --button-bg: #ff8c42;
+      --button-hover-bg: #ffa55c;
+      --shadow-color: rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px var(--shadow-color);
+    }
+
+    h1.typing {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid rgba(255, 255, 255, 0.75);
+      animation: typing 2.5s steps(20, end), blink 0.75s step-end infinite;
+      margin: 0 auto;
+    }
+
+    .theme-select {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background: var(--section-bg);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px var(--shadow-color);
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 28px;
+      background: var(--button-bg);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0, 119, 182, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      background: var(--button-hover-bg);
+      box-shadow: 0 8px 20px rgba(0, 150, 199, 0.6);
+    }
+
+    img {
+      max-width: 200px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+
+    footer {
+      background: var(--secondary-color);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-weight: 600;
+    }
+
+    @keyframes typing { from { width: 0; } to { width: 16ch; } }
+    @keyframes blink { 50% { border-color: transparent; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="typing">Komal Gandhi</h1>
+    <select id="themeSelect" class="theme-select">
+      <option value="light">Ocean 🌊</option>
+      <option value="mint">Soft Mint 🌿</option>
+      <option value="peach">Cream Peach 🍑</option>
+    </select>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="passport size pic.jpg" alt="Komal Gandhi">
+    <p style="text-align: center; max-width: 600px; margin: auto;">I am a passionate tech enthusiast pursuing BCA. I enjoy working with data, designing clean web interfaces, and automating tasks with Python.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS</li>
+      <li>Power BI</li>
+      <li>Python</li>
+      <li>SQL</li>
+      <li>Selenium</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div>
+      <h3>Portfolio Website</h3>
+      <p>Personal website built using HTML/CSS. <a href="#">View Project</a></p>
+    </div>
+    <div>
+      <h3>Data Analysis Project</h3>
+      <p>Used Python, Pandas, and Power BI to analyze sales data. <a href="#">View Project</a></p>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="card"><h3>SQL Basic – HackerRank</h3></div>
+    <div class="card"><h3>SQL Intermediate – HackerRank</h3></div>
+        <div class="card"><h3>SQL Advanced– HackerRank</h3></div>
+            <div class="card"><h3>Python Basic– HackerRank</h3></div>
+
+
+    <div class="card"><h3>CSS Basic – HackerRank</h3></div>
+    <p><a href="certificates.html" target="_blank" class="button">View All Certificates →</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:komalgandhi@example.com" method="post" enctype="text/plain" style="max-width:500px; margin:auto;">
+      <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:10px; margin:10px 0;">
+      <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; margin:10px 0;">
+      <textarea name="message" placeholder="Your Message" rows="5" required style="width:100%; padding:10px; margin:10px 0;"></textarea>
+      <button type="submit" class="button">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Komal Gandhi. All rights reserved.</p>
+  </footer>
+
+  <--Confetti + Theme Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const themeSelect = document.getElementById('themeSelect');
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      themeSelect.value = savedTheme;
+    }
+
+    themeSelect.addEventListener('change', function () {
+      const selected = this.value;
+      document.documentElement.setAttribute('data-theme', selected);
+      localStorage.setItem('theme', selected);
+
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
